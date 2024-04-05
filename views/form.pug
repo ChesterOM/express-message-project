@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1= title
+    form(method="POST", action="/new")
+      div
+        label(for="user") Author's Name:
+        input#user(type="text", name="user")
+      div
+        label(for="text") Message Text:
+        input#text(type="text", name="text")
+      div
+        input(type="submit", value="Submit")

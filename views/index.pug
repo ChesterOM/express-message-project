@@ -1,5 +1,14 @@
-extends layout
+doctype html
+html
+  head
+    title= title
+  body
+    h1= title
+    ul#messages
+      each msg in messages
+        li
+          strong= msg.user
+          |  said "#{msg.text}" at #{msg.added.toLocaleString()}
+    a(href="/new") Add a new message
 
-block content
-  h1= title
-  p Welcome to #{title}
+
